@@ -10,15 +10,12 @@ function isElementInViewport(el) {
 
 function updateHtmlElement(element, image, text, textDirection, imageDirection){
     window.addEventListener('scroll', () => {
-        console.log(element);
         if (isElementInViewport(element)) {
             text.classList.add(textDirection);
             image.classList.add(imageDirection);
         }
     });
 }
-
-
 
 let secondSectionImg = document.getElementById('second-section-img');
 let secondSectionText = document.getElementById('second-section-text');
@@ -29,19 +26,7 @@ let FourthSectionText = document.getElementById('fourth-section-text');
 let lastSectionImg = document.getElementById('last-section-img');
 let lastSectionText = document.getElementById('last-section-text');
 
-
-
 updateHtmlElement(secondSectionImg, secondSectionImg, secondSectionText, "ShowTextFromLeft", "ShowImageFromLeft");
 updateHtmlElement(ThirdSectionText, ThirdSectionText, ThirdSectionImg, "ShowTextFromRigh", "ShowImageFromRigh");
 updateHtmlElement(FourthSectionImg, FourthSectionImg, FourthSectionText, "ShowTextFromRigh", "ShowImageFromRigh");
 updateHtmlElement(lastSectionText, lastSectionText, lastSectionImg, "ShowTextFromBottom", "ShowImageFromBottom");
-
-
-// if (secondSectionImg) {
-//     window.addEventListener('scroll', () => {
-//         if (isElementInViewport(secondSectionImg)) {
-//             secondSectionText.classList.add("ShowTextFromLeft");
-//             secondSectionImg.classList.add("ShowImageFromLeft");
-//         }
-//     });
-// }
