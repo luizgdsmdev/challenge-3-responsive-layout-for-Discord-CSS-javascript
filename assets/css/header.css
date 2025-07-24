@@ -23,9 +23,7 @@
     letter-spacing: 0%;
     text-align: center;
     color: white;
-    margin-bottom: 1.5rem;
     max-width: 19rem;
-    margin: 0 1rem 1.5rem;
 }
 
 .first-section p{
@@ -40,7 +38,8 @@
     margin-bottom: 1.5rem;
     max-width: 49rem;
     line-height: 1.4rem;
-    margin: 0 1rem 1.5rem;
+    margin: 1.5rem 1rem 1.5rem;
+    animation: ShowTextFromBottom 1.5s ease-in-out;
 }
 
 .first-section-buttoms{
@@ -72,6 +71,7 @@
     margin-right: 1rem;
     color: rgba(35, 39, 42, 1);
     background: rgb(255 255 255);
+    cursor: pointer;
 }
 
 .first-buttom:hover{
@@ -83,6 +83,7 @@
 .second-buttom {
     color: white;
     background: rgba(35, 39, 42, 1);
+    cursor: pointer;
 }
 
 .second-buttom:hover {
@@ -150,16 +151,24 @@
 .second-section-text, .fourth-section-text{
     max-width: 21rem;
     margin-left: 1.5rem;
+    animation: ShowTextFromLeft 2s ease-in-out;
+}
+
+.second-section-text p{
+    animation: ShowTextFromLeft 2s ease-in-out;
+}
+.fourth-section-text p{
+    animation: ShowTextFromLeft 2s ease-in-out;
 }
 
 .second-section img{
     filter: drop-shadow(-17px 9px 1.2rem #5533f2);
-    animation: floatingLeft 2s ease-in-out infinite;
+    animation: ShowImageFromright 2s, floatingLeft 2s ease-in-out infinite;
 }
 
 .fourth-section img{
     filter: drop-shadow(-3px 19px 1.2rem #5533f2);
-    animation: floatingLeft 2s ease-in-out infinite;
+    animation: ShowImageFromright 2s, floatingLeft 2s ease-in-out infinite;
 }
 
 @keyframes floatingLeft {
@@ -199,6 +208,7 @@
     letter-spacing: 0%;
     line-height: 3rem;
     margin-bottom: 1.5rem;
+    animation: ShowTextFromRight 1.5s ease-in-out;
 }
 
 .third-section p{
@@ -209,6 +219,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     line-height: 1.5rem;
+    animation: ShowTextFromRight 2s ease-in-out;
 }
 
 .third-section-text{
@@ -218,7 +229,7 @@
 
 .third-section img{
     filter: drop-shadow(17px 9px 1.2rem #5533f2);
-    animation: floatingRight 2s ease-in-out infinite;
+    animation: ShowImageFromLeft 2s, floatingRight 2s ease-in-out infinite;
 }
 
 .last-section{
@@ -268,6 +279,151 @@
     filter: drop-shadow(17px 9px 1.2rem #5533f2);
     animation: floatingRight 2s ease-in-out infinite;
 }
+
+/* ---------------------------------------- */
+.moving-dots{
+    background-color: white;
+    border: 1px solid red;
+    margin-left: 0.5rem;
+    border-radius: 50%;
+    padding: 0.4rem;
+    font-size: 5px;
+    animation: dotsMoviment 12s ease-in-out infinite;
+}
+
+.div-moving-title-dots{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0 6rem 1.5rem;
+    animation: ShowTextFromTop 1.5s ease-in-out;
+}
+
+
+
+
+
+
+/* -------------------- */
+
+.first-section-buttoms button:nth-child(1){
+    animation: ShowButtomsTop 1.9s ease-in-out;
+}
+
+.first-section-buttoms button:nth-child(2){
+    animation: ShowButtomsTop 2.5s ease-in-out;
+}
+
+
+@keyframes ShowButtomsTop {
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes ShowTextFromTop {
+    0%{
+        opacity: 0;
+        transform:translateY(-150px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ShowTextFromBottom {
+    0%{
+        opacity: 0;
+        transform:translateY(150px);
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ShowTextFromLeft{
+    0%{
+        opacity: 0;
+        transform:translateX(150px);
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ShowTextFromRight{
+    0%{
+        opacity: 0;
+        transform:translateX(-150px);
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ShowImageFromLeft{
+    0%{
+        opacity: 0;
+        transform:translateX(150px);
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ShowImageFromright{
+    0%{
+        opacity: 0;
+        transform:translateX(-150px);
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes floatingRight {
      0% {
