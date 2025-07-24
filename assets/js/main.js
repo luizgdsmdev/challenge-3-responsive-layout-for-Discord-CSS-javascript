@@ -1,9 +1,9 @@
-function isElementInViewport(el) {
+function isElementInViewport(el, offset = 0) {
     const rect = el.getBoundingClientRect();
     return (
-        rect.top >= 0 &&
+        rect.top <= (window.innerHeight - offset || document.documentElement.clientHeight - offset) &&
+        rect.bottom >= offset &&
         rect.left >= 0 &&
-        rect.bottom <= ((window.innerHeight -120) || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
