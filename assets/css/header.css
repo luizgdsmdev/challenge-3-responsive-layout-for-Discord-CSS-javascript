@@ -151,7 +151,6 @@
 .second-section-text, .fourth-section-text{
     max-width: 21rem;
     margin-left: 1.5rem;
-    animation: ShowTextFromLeft 2s ease-in-out;
 }
 
 .second-section-text p{
@@ -208,7 +207,6 @@
     letter-spacing: 0%;
     line-height: 3rem;
     margin-bottom: 1.5rem;
-    animation: ShowTextFromRight 1.5s ease-in-out;
 }
 
 .third-section p{
@@ -219,12 +217,16 @@
     line-height: 100%;
     letter-spacing: 0%;
     line-height: 1.5rem;
-    animation: ShowTextFromRight 2s ease-in-out;
 }
 
 .third-section-text{
     max-width: 21rem;
     margin-left: 1.5rem;
+    visibility: collapse;
+}
+
+#third-section-img{
+    visibility: collapse;
 }
 
 .third-section img{
@@ -273,11 +275,16 @@
     text-align: -webkit-center;
     margin-top: 1.5rem;
     margin-left: 1.5rem;
+    visibility: collapse;
+}
+
+.last-section-img{
+    visibility: collapse;
 }
 
 .last-section img{
     filter: drop-shadow(17px 9px 1.2rem #5533f2);
-    animation: floatingRight 2s ease-in-out infinite;
+    visibility: collapse;
 }
 
 /* ---------------------------------------- */
@@ -301,6 +308,62 @@
     margin: 0 6rem 1.5rem;
     animation: ShowTextFromTop 1.5s ease-in-out;
 }
+
+.second-section-img{
+    visibility: collapse;
+    transition: 1s ease-in-out;
+}
+
+.second-section-text{
+    visibility: collapse;
+    transition: 1s ease-in-out;
+}
+
+.third-section-text-p{
+    visibility: collapse;
+}
+
+.ShowTextFromLeft{
+    visibility: visible!important;
+    animation: ShowTextFromLeft 1s ease-in-out;
+}
+
+.ShowTextFromRigh{
+    visibility: visible!important;
+    animation: ShowTextFromRight 1s ease-in-out;
+}
+
+.ShowImageFromLeft{
+    visibility: visible!important;
+    animation: ShowImageFromLeft 1s ease-in-out;
+}
+
+.ShowImageFromRigh{
+    visibility: visible!important;
+    animation: ShowImageFromright 1s ease-in-out;
+}
+
+.ShowTextFromBottom{
+    visibility: visible!important;
+    animation: ShowTextFromBottom 1s ease-in-out;
+}
+
+.ShowImageFromBottom{
+    visibility: visible!important;
+    animation: ShowTextFromBottom 1s ease-in-out;
+}
+
+#fourth-section-text{
+    visibility: collapse;
+}
+
+#fourth-section-img{
+    visibility: collapse;
+}
+
+
+
+    
 
 
 
@@ -449,34 +512,43 @@
 @media screen and (max-width: 998px) {
     .second-section-text, .fourth-section-text, .last-section {
         max-width: 100%;
+        margin: 0;
+        padding: 0 1.5rem 1.5rem;
+    }
+    .fourth-section-img, .fourth-section img{
+        margin: 0;
+        padding: 1.5rem;
+    }
+    .third-section{
+        padding: 1.5rem 1.5rem 1.5rem;
+    }
+    .third-section-text, .fourth-section{
+        margin: 0;
     }
 
     .second-section img{
         width: 100%;
         max-width: 80%;
-        padding-bottom: 1.7rem;
+        padding: 1.5rem;
+    }
+    #second-section{
+        margin: 0!important;
     }
 
     .fourth-section img{
         width: 100%;
         max-width: 80%;
-        margin-bottom: 1.9rem;
     }
 
-    .last-section img{
-        width: 100%;
-        max-width: 80%;
-        margin-bottom: 1.9rem;
-    }
-    
     .third-section-text {
         max-width: 41rem;
         padding-bottom: 1.7rem;
     }
 
     .last-section-text {
-        max-width: 41rem;
-        padding-bottom: 1.7rem;
+        max-width: 28rem;
+        padding: 1.5rem 0;
+        margin: 0;
     }
 
     .third-section img{
@@ -486,5 +558,11 @@
     .last-section img{
         width: 100%;
         max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 481px){
+    .div-moving-title-dots{
+        margin-top: 1.5rem;
     }
 }
