@@ -361,15 +361,6 @@
     visibility: collapse;
 }
 
-
-
-    
-
-
-
-
-
-
 /* -------------------- */
 
 .first-section-buttoms button:nth-child(1){
@@ -379,7 +370,6 @@
 .first-section-buttoms button:nth-child(2){
     animation: ShowButtomsTop 2.5s ease-in-out;
 }
-
 
 @keyframes ShowButtomsTop {
     0%{
@@ -392,8 +382,6 @@
         opacity: 1;
     }
 }
-
-
 
 @keyframes ShowTextFromTop {
     0%{
@@ -476,17 +464,6 @@
         transform: translateX(0px);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes floatingRight {
      0% {
